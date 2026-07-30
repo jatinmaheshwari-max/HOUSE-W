@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griha Pravesh & Vastu Shanti Invitation | The Aggarwal Family</title>
+    <meta name="description" content="Cordially inviting you to celebrate the Griha Pravesh and Vastu Puja of our new home.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-peacock">
+
+    <!-- 1. LORD GANESHA PRELOADER / SPLASH SCREEN (3.5s Fade Out) -->
+    <div id="preloader" class="preloader-screen" aria-label="Loading Invitation">
+        <div class="preloader-content">
+            <div class="ganesha-container">
+                <div class="ganesha-aura"></div>
+                <!-- Lord Ganesha Golden SVG Motif -->
+                <svg class="ganesha-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="92" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="6 4" />
+                    <circle cx="100" cy="100" r="82" stroke="url(#goldGrad)" stroke-width="1.5" />
+                    <!-- Crown (Mukut) -->
+                    <path d="M100 35 L115 65 L85 65 Z" fill="url(#goldGrad)" />
+                    <path d="M100 25 L106 40 L94 40 Z" fill="#FFE58F" />
+                    <circle cx="100" cy="30" r="3" fill="#E60000" />
+                    <!-- Head & Ears -->
+                    <path d="M70 70 Q50 60 55 90 Q65 105 80 100 Q100 95 100 80 Q100 95 120 100 Q135 105 145 90 Q150 60 130 70 Z" fill="url(#goldGrad)" />
+                    <!-- Trunk (Vakratunda) -->
+                    <path d="M93 90 C93 115 85 135 105 140 C120 145 125 130 115 125 C108 122 108 132 114 134" stroke="url(#goldGrad)" stroke-width="6" stroke-linecap="round" fill="none" />
+                    <!-- Tilak -->
+                    <path d="M96 68 H104 M94 72 H106 M98 76 H102" stroke="#E60000" stroke-width="2" />
+                    <circle cx="100" cy="80" r="2" fill="#E60000" />
+                    <!-- Tusk -->
+                    <path d="M88 98 L80 102" stroke="#FFF" stroke-width="3" stroke-linecap="round" />
+                    <!-- Modak in Trunk tip -->
+                    <circle cx="116" cy="125" r="4" fill="#FFE58F" />
+                </svg>
+            </div>
+            
+            <div class="shloka-text">
+                <p class="sanskrit">॥ श्री गणेशाय नमः ॥</p>
+                <p class="sanskrit-sub">Vakratunda Mahakaya Surya Koti Samaprabha<br>Nirvighnam Kuru Me Deva Sarva-Karyeshu Sarvada</p>
+            </div>
+
+            <div class="loading-bar-wrapper">
+                <div class="loading-bar-fill"></div>
+            </div>
+            <p class="loading-status">Opening Auspicious Invitation...</p>
+            <button id="skipPreloaderBtn" class="skip-btn" onclick="dismissPreloader()">Skip to Invitation &rarr;</button>
+        </div>
+    </div>
+
+    <!-- MAIN APP CONTAINER -->
+    <div class="main-wrapper">
+
+        <!-- FLOATING UTILITY TOOLBAR -->
+        <div class="top-controls">
+            <!-- Audio Toggle -->
+            <button id="musicToggleBtn" class="icon-btn" title="Toggle Ambient Music" onclick="toggleAudio()">
+                <span id="musicIcon">🎵</span> <span class="btn-text">Music</span>
+            </button>
+            <!-- Theme Switcher -->
+            <div class="theme-dropdown">
+                <button class="icon-btn" onclick="toggleThemeMenu()">🎨 Theme</button>
+                <div id="themeMenu" class="theme-menu hidden">
+                    <button onclick="setTheme('peacock')">🦚 Royal Peacock & Emerald</button>
+                    <button onclick="setTheme('maroon')">🌺 Royal Maroon & Gold</button>
+                    <button onclick="setTheme('ivory')">✨ Modern Ivory & Rose Gold</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CARD CONTAINER -->
+        <main class="invitation-card">
+            
+            <!-- CARD HEADER -->
+            <header class="card-header">
+                <div class="top-garland">
+                    <span class="garland-leaf">🍃</span>
+                    <span class="garland-flower">🌼</span>
+                    <span class="garland-leaf">🍃</span>
+                    <span class="garland-flower">🌸</span>
+                    <span class="garland-leaf">🍃</span>
+                    <span class="garland-flower">🌼</span>
+                    <span class="garland-leaf">🍃</span>
+                </div>
+                <h1 class="main-title">GRIHA PRAVESH INVITATION</h1>
+                <div class="header-divider">
+                    <span class="line"></span>
+                    <span class="diamond">◆</span>
+                    <span class="line"></span>
+                </div>
+            </header>
+
+            <!-- ARCH INVITATION FRAME -->
+            <div class="arch-frame">
+                <div class="arch-content">
+                    <div class="shlok-mini">॥ ॐ नमः शिवाय ॥</div>
+                    <p class="subtitle">CELEBRATING A NEW CHAPTER</p>
+                    
+                    <div class="family-name-box">
+                        <h2 class="family-title" id="hostFamilyName">The Aggarwal Family</h2>
+                       
+                    </div>
+
+                    <p class="invitation-lead">
+                        Warmly Invites You to grace the auspicious occasion of our
+                    </p>
+                    <h3 class="event-headline">Housewarming & Vastu Shanti</h3>
+
+                    <!-- THE EVENT DETAILS -->
+                    <section class="section-block date-section">
+                        <h4 class="section-label">THE EVENT DETAILS</h4>
+                        <div class="gold-date-badge">
+                            <span class="day-name">SUNDAY</span>
+                            <span class="date-num">24<sup>th</sup> NOVEMBER 2024</span>
+                        </div>
+                        <p class="location-city">📍 Bengaluru, Karnataka</p>
+                    </section>
+
+                    <!-- EVENT TIMELINE SECTION WITH ANIMATED ICONS -->
+                    <section class="section-block timeline-section">
+                        <h4 class="section-label">✦ EVENT TIMELINE ✦</h4>
+                        
+                        <div class="timeline-grid">
+                            
+                            <!-- ITEM 1: VASTU SHANTI POOJA (TWINKLING DIYA) -->
+                            <div class="timeline-card">
+                                <div class="icon-container diya-container">
+                                    <svg class="diya-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g class="flame-group">
+                                            <path class="flame-outer" d="M32 6 Q39 18 32 30 Q25 18 32 6 Z" fill="url(#flameGradOuter)" />
+                                            <path class="flame-inner" d="M32 12 Q36 20 32 28 Q28 20 32 12 Z" fill="url(#flameGradInner)" />
+                                            <circle class="flame-glow" cx="32" cy="18" r="14" fill="#FFA500" opacity="0.3" />
+                                        </g>
+                                        <path d="M12 36 C12 50 52 50 52 36 C52 32 12 32 12 36 Z" fill="url(#brassGrad)" stroke="#B8860B" stroke-width="1.5" />
+                                        <path d="M26 48 L22 58 H42 L38 48 Z" fill="url(#brassGrad)" />
+                                        <ellipse cx="32" cy="36" rx="20" ry="4" fill="#8B4513" />
+                                    </svg>
+                                </div>
+                                <div class="time-badge">10:30 AM</div>
+                                <h5 class="event-title">Vastu Shanti Pooja</h5>
+                                <p class="event-desc">Sacred ritual for peace & positive energy</p>
+                            </div>
+
+                            <div class="timeline-dots"><span></span><span></span><span></span></div>
+
+                            <!-- ITEM 2: MAHA AARTI & KALASH STHAPANA -->
+                            <div class="timeline-card">
+                                <div class="icon-container kalash-container">
+                                    <svg class="kalash-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M32 10 Q40 2 48 14 Q32 20 32 10 Z" fill="#2E8B57" />
+                                        <path d="M32 10 Q24 2 16 14 Q32 20 32 10 Z" fill="#2E8B57" />
+                                        <circle cx="32" cy="14" r="7" fill="#8B4513" stroke="#D4AF37" stroke-width="1.5" />
+                                        <path d="M14 62 V30 Q32 18 50 30 V62" stroke="url(#goldGrad)" stroke-width="2" fill="none" />
+                                        <path d="M20 32 H44 L48 48 C48 58 16 58 16 48 Z" fill="url(#brassGrad)" stroke="#DAA520" stroke-width="1.5" />
+                                    </svg>
+                                </div>
+                                <div class="time-badge">12:30 PM</div>
+                                <h5 class="event-title">Maha Aarti</h5>
+                                <p class="event-desc">Kalash Sthapana & Blessings</p>
+                            </div>
+
+                            <div class="timeline-dots"><span></span><span></span><span></span></div>
+
+                            <!-- ITEM 3: HOUSEWARMING DINNER (TWINKLING HOUSE) -->
+                            <div class="timeline-card">
+                                <div class="icon-container house-container">
+                                    <div class="sparkle sp-1">✨</div>
+                                    <div class="sparkle sp-2">⭐</div>
+                                    <div class="sparkle sp-3">✨</div>
+                                    
+                                    <svg class="house-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="house-roof" d="M8 28 L32 8 L56 28 H48 V54 H16 V28 Z" fill="url(#brassGrad)" stroke="#FFD700" stroke-width="1.5" />
+                                        <rect x="26" y="34" width="12" height="20" rx="6" fill="#FFF8DC" stroke="#B8860B" stroke-width="1.5" />
+                                        <circle class="door-light" cx="32" cy="42" r="6" fill="#FFA500" opacity="0.6" />
+                                        <path d="M46 14 V8 L54 6 V12 M46 11 L54 9" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                                <div class="time-badge">06:30 PM Onwards</div>
+                                <h5 class="event-title">Griha Pravesh Feast</h5>
+                                <p class="event-desc">Dinner & Housewarming Celebration</p>
+                            </div>
+
+                        </div>
+                    </section>
+
+                    <!-- VENUE SECTION -->
+                    <section class="section-block venue-section">
+                        <h4 class="section-label">✦ VENUE DETAILS ✦</h4>
+                        <div class="venue-card">
+                            <h5 class="venue-name">THE SERENE HAVEN</h5>
+                            <p class="venue-address">
+                                Villa A-45, Emerald Greens Layout,<br>
+                                Near Central Park, Outer Ring Road,<br>
+                                Bengaluru, Karnataka – 560103
+                            </p>
+
+                            <a href="https://maps.google.com/?q=Emerald+Greens+Bengaluru" target="_blank" rel="noopener" class="btn btn-primary map-btn">
+                                📍 GET DIRECTIONS ON GOOGLE MAPS
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- RSVP SECTION -->
+                    <section class="section-block rsvp-section">
+                        <h4 class="section-label">✦ RSVP ✦</h4>
+                        <p class="rsvp-prompt">Please let us know if you can join us!</p>
+                        
+                        <div id="rsvpResponseBox" class="rsvp-actions">
+                            <button class="btn btn-success" onclick="openRsvpModal(true)">
+                                ✅ YES, WILL ATTEND
+                            </button>
+                            <button class="btn btn-outline" onclick="openRsvpModal(false)">
+                                ❌ NO, CAN'T ATTEND
+                            </button>
+                        </div>
+
+                        <div class="action-buttons-grid">
+                            <button class="btn btn-gold" onclick="addToCalendar()">
+                                📅 ADD TO CALENDAR
+                            </button>
+                            <button class="btn btn-whatsapp" onclick="shareOnWhatsApp()">
+                                💬 SHARE ON WHATSAPP
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- CARD FOOTER -->
+                    <footer class="card-footer">
+                        <p class="blessing-quote">"May our new home be filled with laughter, love, and endless blessings."</p>
+                        <p class="with-love">With Warm Regards,<br><strong>The Aggarwal Family & Relatives</strong></p>
+                    </footer>
+
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- RSVP MODAL -->
+    <div id="rsvpModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeRsvpModal()">&times;</button>
+            <h3 id="modalTitle" class="modal-heading">Confirm Your Attendance</h3>
+            
+            <form id="rsvpForm" onsubmit="handleRsvpSubmit(event)">
+                <div class="form-group">
+                    <label for="guestName">Your Full Name *</label>
+                    <input type="text" id="guestName" required placeholder="e.g. Ramesh & Family">
+                </div>
+
+                <div id="attendingFields">
+                    <div class="form-group">
+                        <label for="guestCount">Number of Guests</label>
+                        <select id="guestCount">
+                            <option value="1">1 Person</option>
+                            <option value="2" selected>2 Persons</option>
+                            <option value="3">3 Persons</option>
+                            <option value="4">4 Persons</option>
+                            <option value="5+">5+ Family Members</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dietPref">Dietary Preference</label>
+                        <select id="dietPref">
+                            <option value="Pure Veg">Pure Jain / Pure Veg Feast</option>
+                            <option value="Standard Veg">Standard Vegetarian</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="guestMessage">Wishes for Host (Optional)</label>
+                    <textarea id="guestMessage" rows="3" placeholder="Congratulations on your new home!"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Submit RSVP</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- EDIT NAME MODAL -->
+    <div id="editNameModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeEditModal()">&times;</button>
+            <h3>Customize Family Name</h3>
+            <div class="form-group">
+                <label for="newFamilyInput">Family Name on Invitation:</label>
+                <input type="text" id="newFamilyInput" placeholder="e.g. The Sharma Family">
+            </div>
+            <button onclick="saveFamilyName()" class="btn btn-primary btn-full">Save Changes</button>
+        </div>
+    </div>
+
+    <audio id="bgAudio" loop preload="auto">
+        <source src="https://actions.google.com/sounds/v1/ambiences/indian_flute_ambient.ogg" type="audio/ogg">
+    </audio>
+
+    <svg width="0" height="0" style="position:absolute;">
+        <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFE58F" />
+                <stop offset="50%" stop-color="#D4AF37" />
+                <stop offset="100%" stop-color="#AA771C" />
+            </linearGradient>
+            
+            <linearGradient id="brassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#FFF3B0" />
+                <stop offset="40%" stop-color="#E5C158" />
+                <stop offset="100%" stop-color="#996515" />
+            </linearGradient>
+
+            <radialGradient id="flameGradOuter" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FFFF00" />
+                <stop offset="60%" stop-color="#FF4500" />
+                <stop offset="100%" stop-color="#8B0000" />
+            </radialGradient>
+
+            <radialGradient id="flameGradInner" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FFFFFF" />
+                <stop offset="50%" stop-color="#FFF700" />
+                <stop offset="100%" stop-color="#FF8C00" />
+            </radialGradient>
+        </defs>
+    </svg>
+
+    <script src="script.js"></script>
+</body>
+</html>
